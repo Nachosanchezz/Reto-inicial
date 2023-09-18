@@ -1,14 +1,3 @@
-tablero = [
-    [1, 2, 3], 
-    [4, 5, 6], 
-    [7, 8, 9],
-    [None, 0, None]
-]
-
-n = 2
-
-def contar_movimientos(tablero, n):
-
 movimientos = {
     0: [6, 4], 
     1: [6, 8], 
@@ -22,4 +11,7 @@ movimientos = {
     9: [2, 4], 
 
 }
+
+def contar_movimientos_caballo(n):
+    dp = [[0] * 10 for_ in range(n + 1)]
 
