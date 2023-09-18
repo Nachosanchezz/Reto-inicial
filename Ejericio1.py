@@ -13,5 +13,23 @@ movimientos = {
 }
 
 def contar_movimientos_caballo(n):
+    
     dp = [[0] * 10 for_ in range(n + 1)]
+
+    for i in range (10):
+        dp[1][i] = 1
+
+    for pasos in range(2, n + 1):
+        for inicio in range(10):
+            for siguiente in movimientos[inicio]:
+                dp[pasos][inicio] += dp [pasos - 1][siguiente]
+
+    total = sum(dp[n])
+    return total
+
+n = 500
+total_movimientos = contar_movimientos_caballo(n)
+print(f"Total movimientos para {n} pasos: {total_movimientos}")
+
+
 
