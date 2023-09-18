@@ -14,7 +14,7 @@ movimientos = {
 
 def contar_movimientos_caballo(n):
     
-    dp = [[0] * 10 for_ in range(n + 1)]
+    dp = [[0] * 10 for _ in range(n + 1)]
 
     for i in range (10):
         dp[1][i] = 1
